@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Airsoft Video Machine</title>
+<meta name="description" content="Heart rate, GPS route, shots and story cards on your airsoft videos. Downloads for Windows and Mac.">
+<style>
+:root {
+  --bg: #0f1114; --panel: #171a1f; --edge: #262b33; --text: #e9ecef; --dim: #9aa3ad;
+  --accent: #3ddc6f; --accent-ink: #062b12; --warn: #ffb347;
+}
+@media (prefers-color-scheme: light) {
+  :root { --bg: #f4f6f8; --panel: #ffffff; --edge: #dde2e7; --text: #15191d; --dim: #5d6670; --accent: #1f9e48; --accent-ink: #ffffff; --warn: #a65f00; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Inter, Roboto, sans-serif; }
+a { color: var(--accent); }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+header { padding: 56px 0 28px; }
+.brand { font-weight: 800; letter-spacing: .04em; color: var(--accent); font-size: 14px; text-transform: uppercase; }
+h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.1; margin: 8px 0 12px; letter-spacing: -.02em; }
+.lead { color: var(--dim); max-width: 680px; font-size: 18px; margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin: 28px 0 8px; }
+.card { background: var(--panel); border: 1px solid var(--edge); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+.card h2 { margin: 0; font-size: 22px; display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.ver { font-size: 14px; font-weight: 600; color: var(--dim); }
+.req { color: var(--dim); font-size: 14px; margin: 0; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--accent); color: var(--accent-ink); font-weight: 700; text-decoration: none;
+       padding: 12px 18px; border-radius: 10px; min-height: 44px; }
+.btn:hover { filter: brightness(1.08); }
+.btn small { font-weight: 500; opacity: .8; }
+details { border-top: 1px solid var(--edge); padding-top: 10px; }
+summary { cursor: pointer; font-weight: 600; }
+ol, ul { padding-left: 20px; margin: 8px 0; }
+li { margin: 4px 0; }
+.note { background: color-mix(in srgb, var(--warn) 12%, transparent); border: 1px solid color-mix(in srgb, var(--warn) 35%, transparent);
+        border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+section { margin: 40px 0; }
+section h3 { font-size: 20px; margin: 0 0 12px; }
+.feat { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.feat div { background: var(--panel); border: 1px solid var(--edge); border-radius: 12px; padding: 14px 16px; }
+.feat b { display: block; margin-bottom: 2px; }
+.feat span { color: var(--dim); font-size: 14px; }
+.rel { background: var(--panel); border: 1px solid var(--edge); border-radius: 12px; padding: 14px 16px; margin: 10px 0; }
+.rel-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: baseline; }
+.rel-head b { font-size: 16px; }
+.rel-head span { color: var(--dim); font-size: 14px; }
+.rel .body { color: var(--dim); font-size: 14px; white-space: pre-wrap; max-height: 9.5em; overflow: hidden; position: relative; }
+.rel .assets a { display: inline-block; margin: 8px 12px 0 0; font-weight: 600; }
+.tabs { display: flex; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+.tabs button { background: transparent; color: var(--text); border: 1px solid var(--edge); border-radius: 999px; padding: 8px 14px; font: inherit; cursor: pointer; min-height: 40px; }
+.tabs button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+footer { color: var(--dim); font-size: 13px; padding: 24px 0 48px; border-top: 1px solid var(--edge); margin-top: 40px; }
+code { background: var(--edge); padding: 1px 6px; border-radius: 6px; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">Automatic Airsoft Video Machine</div>
+    <h1>Your airsoft game, with your heart rate, route and story on the video.</h1>
+    <p class="lead">Drop in your helmet-cam clips and your watch's data. It puts a live HUD on the video (heart rate, map, speed, shots),
+      lets you cut on a multitrack timeline, add story and game cards, and exports a finished movie.</p>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Windows <span class="ver" id="win-ver">0.4.0</span></h2>
+      <p class="req">Windows 10 or 11, 64-bit. Nothing to install: .NET and FFmpeg are inside the folder.</p>
+      <a class="btn" id="win-btn" href="https://github.com/uusitalo/airsoft-video-machine/releases/download/windows-v0.4.0/AVM-Windows-0.4.0.zip">Download for Windows <small id="win-size">208 MB</small></a>
+      <details>
+        <summary>How to start it</summary>
+        <ol>
+          <li>Unzip the download (right-click › Extract All).</li>
+          <li>Open the folder and double-click <b>AVM.exe</b>.</li>
+          <li>If Windows says "Windows protected your PC", click <b>More info</b> › <b>Run anyway</b> (the app isn't signed).</li>
+        </ol>
+        Your projects and exports go to <code>Documents\AVM</code>.
+      </details>
+    </div>
+    <div class="card">
+      <h2>Mac <span class="ver" id="mac-ver">1.6.46</span></h2>
+      <p class="req">macOS 14 Sonoma or newer, Apple silicon (M1 or newer).</p>
+      <a class="btn" id="mac-btn" href="https://github.com/uusitalo/airsoft-video-machine/releases/download/mac-v1.6.46/AVM-Swift-1.6.46-mac.zip">Download for Mac <small id="mac-size">11 MB</small></a>
+      <details>
+        <summary>How to start it</summary>
+        <ol>
+          <li>Unzip it and drag <b>AVM Swift</b> to Applications.</li>
+          <li>The first time, right-click the app › <b>Open</b> › <b>Open</b>. If macOS still refuses, open System Settings › Privacy &amp; Security and click <b>Open Anyway</b>.</li>
+        </ol>
+        <div class="note">The app isn't signed by Apple, so macOS asks once. If it says the app is "damaged", run this once in Terminal:
+          <code>xattr -dr com.apple.quarantine "/Applications/AVM Swift.app"</code></div>
+      </details>
+    </div>
+  </div>
+  <p class="req">Projects are the same on both: a project made on a Mac opens on Windows and the other way round.
+    The older Python version for Windows (3.x) is still under All versions.</p>
+
+  <section>
+    <h3>What it does</h3>
+    <div class="feat">
+      <div><b>Live HUD</b><span>Heart rate, map with your route, speed, distance, clock and shots, in several themes.</span></div>
+      <div><b>Watch data</b><span>Apple Health export, GPX or TCX from Garmin, Polar, Suunto, Strava…</span></div>
+      <div><b>Friends' angles</b><span>Their videos on Video 2, lined up by clock or by sound; their dots on your map.</span></div>
+      <div><b>Cards</b><span>Story, war, funny and game cards, titles, generators and motion cards with you cut out of the video.</span></div>
+      <div><b>Multitrack editor</b><span>Cut, trim, move, magnetic edges, music, undo; live preview with sound.</span></div>
+      <div><b>Export</b><span>720p to 4K using your graphics card's encoder when there is one.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h3>All versions</h3>
+    <div class="tabs" role="group" aria-label="Which app">
+      <button type="button" data-k="windows" aria-pressed="true">Windows</button>
+      <button type="button" data-k="mac" aria-pressed="false">Mac</button>
+      <button type="button" data-k="python" aria-pressed="false">Windows, old Python app</button>
+    </div>
+    <div id="releases"><p class="req">Loading the versions…</p></div>
+    <p class="req">Every version with its changes is also on the <a id="all-link" href="https://github.com/uusitalo/airsoft-video-machine/releases">Releases page</a>.</p>
+  </section>
+
+  <footer>
+    Made for our own games. Windows builds include FFmpeg (GPL, from gyan.dev; licence in the <code>ffmpeg</code> folder) and a person-finder model
+    from torchvision (BSD 3-Clause). Fonts: Inter, Lora, Share Tech Mono, Orbitron, Rajdhani (SIL Open Font License).
+  </footer>
+</div>
+
+<script>
+(function () {
+  // The owner and repository come from the page's own address (owner.github.io/repo), so the page works after a rename too.
+  var host = location.hostname, path = location.pathname.split('/').filter(Boolean);
+  var owner = host.endsWith('.github.io') ? host.split('.')[0] : 'uusitalo';
+  var repo = host.endsWith('.github.io') && path.length ? path[0] : 'airsoft-video-machine';
+  document.querySelectorAll('a[href*="uusitalo"]').forEach(function (a) { a.href = a.href.replace('uusitalo', owner).replace('airsoft-video-machine', repo); });
+
+  var all = [], show = 'windows';
+  // which app a file is: by its name (one release can hold files of several apps)
+  function kindOf(name, tag) {
+    if (/AVM-Swift|[-_]mac\.zip$/i.test(name)) return 'mac';
+    if (/^AVM-Windows/i.test(name)) return 'windows';
+    if (/AutomaticAirsoftVideoMachine/i.test(name)) return 'python';
+    return /^mac/i.test(tag) ? 'mac' : 'windows';
+  }
+  function filesOf(r, k) { return (r.assets || []).filter(function (x) { return kindOf(x.name, r.tag_name) === k; }); }
+  function verOf(name) { var m = name.match(/(\d+\.\d+\.\d+)/); return m ? m[1] : ''; }
+  function cmp(a, b) { var x = a.split('.').map(Number), y = b.split('.').map(Number); for (var i = 0; i < 3; i++) if ((x[i] || 0) !== (y[i] || 0)) return (x[i] || 0) - (y[i] || 0); return 0; }
+  function mb(n) { return n > 1e9 ? (n / 1e9).toFixed(1) + ' GB' : Math.round(n / 1e6) + ' MB'; }
+  function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function render() {
+    var box = document.getElementById('releases');
+    box.textContent = '';
+    var list = all.filter(function (r) { return !r.draft && filesOf(r, show).length; });
+    if (!list.length) { box.appendChild(el('p', 'req', 'No versions here yet.')); return; }
+    list.forEach(function (r) {
+      var d = el('div', 'rel');
+      var h = el('div', 'rel-head');
+      h.appendChild(el('b', null, r.name || r.tag_name));
+      h.appendChild(el('span', null, new Date(r.published_at).toLocaleDateString()));
+      d.appendChild(h);
+      if (r.body) d.appendChild(el('div', 'body', r.body.replace(/\r/g, '')));
+      var a = el('div', 'assets');
+      filesOf(r, show).sort(function (x, y) { return cmp(verOf(y.name), verOf(x.name)); }).forEach(function (x) {
+        var l = el('a', null, x.name + ' (' + mb(x.size) + ')'); l.href = x.browser_download_url; a.appendChild(l);
+      });
+      var more = el('a', null, 'All changes ›'); more.href = r.html_url; a.appendChild(more);
+      d.appendChild(a);
+      box.appendChild(d);
+    });
+  }
+
+  // the big button: the newest file of that app in any release
+  function latest(k, verId, btnId, sizeId) {
+    var best = null;
+    all.forEach(function (r) {
+      if (r.draft || r.prerelease) return;
+      filesOf(r, k).forEach(function (x) { if (!best || cmp(verOf(x.name), verOf(best.name)) > 0) best = x; });
+    });
+    var btn = document.getElementById(btnId);
+    if (!best) { btn.href = 'https://github.com/' + owner + '/' + repo + '/releases'; document.getElementById(sizeId).textContent = 'coming soon'; return; }
+    document.getElementById(verId).textContent = verOf(best.name);
+    btn.href = best.browser_download_url;
+    document.getElementById(sizeId).textContent = mb(best.size);
+  }
+
+  document.querySelectorAll('.tabs button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      show = b.dataset.k;
+      document.querySelectorAll('.tabs button').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      render();
+    });
+  });
+
+  fetch('https://api.github.com/repos/' + owner + '/' + repo + '/releases?per_page=100')
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (list) {
+      all = list.sort(function (a, b) { return new Date(b.published_at) - new Date(a.published_at); });
+      latest('windows', 'win-ver', 'win-btn', 'win-size');
+      latest('mac', 'mac-ver', 'mac-btn', 'mac-size');
+      render();
+    })
+    .catch(function () {
+      document.getElementById('releases').innerHTML = '';
+      var p = el('p', 'req'); p.append('The list could not be loaded right now. ');
+      var l = el('a', null, 'See all versions on GitHub'); l.href = 'https://github.com/' + owner + '/' + repo + '/releases'; p.appendChild(l);
+      document.getElementById('releases').appendChild(p);
+    });
+})();
+</script>
+</body>
+</html>
