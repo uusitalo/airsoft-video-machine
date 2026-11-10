@@ -9,13 +9,14 @@ cards and titles, and a finished movie out.
 |---|---|---|
 | Windows | [Releases](../../releases) (tags `windows-v…`) | Windows 10/11 64-bit, nothing to install |
 | Mac | [Releases](../../releases) (tags `mac-v…`) | macOS 14+, Apple silicon |
+| Linux | [Releases](../../releases) (tags `linux-v…`) | 64-bit Linux, FFmpeg (`sudo apt install ffmpeg`) |
 
 Projects are the same format on both: a project made on a Mac opens on Windows and the other way round.
 
 <!-- avm-previews:start -->
 ## Effects preview
 
-Made by the app itself (AVM Windows 0.28.0 / AVM Swift 1.6.57). Each logo transition shows your team logo in the middle
+Made by the app itself (AVM Windows and Linux 0.29.1 / AVM Swift 1.6.59). Each logo transition shows your team logo in the middle
 of the cut. Pick them on the Timeline: select a piece › Transition.
 
 | Logo on fire | Burning logo (ash & embers) |
@@ -32,7 +33,7 @@ of the cut. Pick them on the Timeline: select a piece › Transition.
 
 ![Friend views](docs/previews/friend-views.webp)
 
-**Friends on the HUD:** each friend's heart rate and how far they are from you, and their dots on the map - from their own route / heart-rate files (GPX, TCX, a Health export). Shown here with made-up example routes.
+**Friends on the HUD:** each friend's heart rate and how far they are from you, and their dots on the map - from their own route / heart-rate files (GPX, TCX, a Health export). When you or a friend is hit, the heartbeat flatlines (a heart monitor with HIT and a long beep; their row and map dot go grey). Shown here with made-up example routes.
 
 ![Friends on the HUD](docs/previews/friends-hud.webp)
 
