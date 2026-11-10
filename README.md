@@ -28,6 +28,16 @@ of the cut. Pick them on the Timeline: select a piece › Transition.
 
 ![Radio call](docs/previews/radio-call.webp)
 
+**Friends' cameras (Video 2):** picture-in-picture, side by side, and switching to your friend's camera with a transition (one test clip plays as both cameras here).
+
+![Friend views](docs/previews/friend-views.webp)
+
+**Friends on the HUD:** each friend's heart rate and how far they are from you, and their dots on the map - from their own route / heart-rate files (GPX, TCX, a Health export). Shown here with made-up example routes.
+
+![Friends on the HUD](docs/previews/friends-hud.webp)
+
+[▶ The friends preview as a video (MP4)](docs/previews/friends-preview.mp4)
+
 **Transitions:** Luma melt, Lens flare wipe, Prism split, Warp zoom, Film roll, Cube turn, Water ripple
 
 ![Transitions](docs/previews/transitions.webp)
