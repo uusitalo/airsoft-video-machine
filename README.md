@@ -14,6 +14,48 @@ cards and titles, and a finished movie out.
 Projects are the same format on both: a project made on a Mac opens on Windows and the other way round.
 
 <!-- avm-previews:start -->
+## Example
+
+Made by the app itself (AVM Windows and Linux 1.6.88 / AVM Swift 1.6.88) from one short test clip, with a made-up route and heart rate.
+
+[![The example film](docs/previews/example-game.jpg)](docs/previews/example-game.mp4)
+
+[▶ The example film (MP4, 35 s)](docs/previews/example-game.mp4)
+
+**Airsoft HUD:** heart rate, time, distance and shots, the satellite map with the field you drew on the Map page, your team's badge turning in the corner (its 3D model when the team has one) and a face that reacts to the game - your own face pictures, or this drawn one. When you are hit, the heartbeat flatlines.
+
+![Airsoft HUD](docs/previews/airsoft-hud.webp)
+
+| Briefing map card (the plan from the Map page) | Gun teardown card (what was wrong, and the fix) |
+|:---:|:---:|
+| ![Briefing map](docs/previews/briefing-map.webp) | ![Gun teardown](docs/previews/gun-teardown.webp) |
+
+**Drawn cards** (1.6.88): a chronograph reading with the BB's flight, how an HPA gun works, and your kit laid out piece by piece - set the numbers and the gun on the card.
+
+| Chrono and the BB's flight | HPA: how the air gets to the BB |
+|:---:|:---:|
+| ![Chrono card](docs/previews/card-chrono.jpg) | ![HPA card](docs/previews/card-hpa.jpg) |
+
+![Kit card](docs/previews/card-kit.jpg)
+
+[▶ The three cards as a video (MP4, 27 s)](docs/previews/new-cards.mp4)
+
+**Game events and subtitles:** mission updates, objectives, weapon changes and reloads as they happen, your shots counted from the magazine, and what was said as subtitles (also saved as an .srt file with the movie). Every game style draws them its own way.
+
+![Game events and subtitles](docs/previews/events-subtitles.webp)
+
+## The app
+
+| Timeline | Storyboard |
+|:---:|:---:|
+| ![Timeline](docs/previews/app-timeline.jpg) | ![Storyboard](docs/previews/app-storyboard.jpg) |
+| **Map page: plan the field** | **Edit page: one clip, its cut and its shots** |
+| ![Map page](docs/previews/app-map.jpg) | ![Edit page](docs/previews/app-edit.jpg) |
+
+**Cards on the timeline** (here the gun teardown card, with its gun and problem pickers):
+
+![A card on the timeline](docs/previews/app-card.jpg)
+
 ## Effects preview
 
 Made by the app itself (AVM Windows and Linux 0.29.1 / AVM Swift 1.6.59). Each logo transition shows your team logo in the middle
