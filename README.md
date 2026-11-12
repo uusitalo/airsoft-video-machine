@@ -14,6 +14,126 @@ cards and titles, and a finished movie out.
 Projects are the same format on both: a project made on a Mac opens on Windows and the other way round.
 
 <!-- avm-previews:start -->
+## What is it?
+
+**Automatic Airsoft Video Machine (AVM)** turns your airsoft helmet-cam or chest-cam footage into a finished game movie. It puts your **heart rate, GPS route, map, shots and hits** on the video as a live HUD. You can add your **friends' cameras**, **story cards**, **titles**, **subtitles**, **music** and **effects**, then export a movie, a vertical Reel or short clips.
+
+It is a full video editor made for airsoft games. Most of the work is done by the app: it finds your shots in the sound, lines up your friends' videos, writes the subtitles and makes a first edit. Everything runs on your own computer, and nothing is uploaded unless you publish it.
+
+There are two apps that read the same projects:
+
+- **AVM Swift** for Mac (Apple silicon, macOS 14+).
+- **AVM** for Windows and Linux.
+
+A project made on one opens on the other. Features marked *(Mac)* are only in the Mac app so far.
+
+## Everything it does
+
+### Your data on the video: the HUD
+- **Heart rate and route** come from an Apple Health export, from GPX, TCX or CSV files (Garmin, Polar, Suunto, Strava…), or from your watch's workout. A route without times is spread over the filming time.
+- **Shown on the picture:** heart rate with zones and a graph, the map with your route walked so far, speed, distance, the clock and shots fired. *(Mac)* Health meters are shown too.
+- **Many HUD themes, each with its own layout:**
+  - The classic ones: bold, sport, terminal, gauge, glass, minimal, tactical and neon.
+  - The Pro family.
+  - The **Airsoft HUD**: a satellite map with the field you drew, your team's badge turning in 3D, and a **Doom-style face** that reacts to the game. The face can be drawn or made from your own selfies, and you can place and size it anywhere.
+- **40+ game styles** (shooter, royale, retro, cinema, field and more) draw their own HUD, menus, titles, transitions and shot marks.
+- **When you are hit**, the heartbeat flatlines with a heart monitor and a long beep.
+- **Per piece:** the HUD can be turned off or given another theme for any piece of the video.
+
+### Friends' cameras
+- **Friends' videos on Video 2**, lined up by the clock or automatically **by sound**. The sync is exact even when a camera's clock is wrong by hours, and it stays in sync when you trim, move or split your own pieces.
+- **Ways to show their camera:**
+  - Picture-in-picture, with keyframes to move it.
+  - Side by side (split screen).
+  - Switching to their camera with a transition.
+  - Cards made from their picture.
+- **Each friend gets their own tracks** on the timeline under their name: video, sound, subtitles, cards and titles.
+- **Whose video it is:** each friend's picture and name sit on their video, in any corner or anywhere you like.
+- **Their route and heart rate** can be on your HUD: a squad list, their dots on your map, and their own hits.
+- **Player profiles** (`.avmplayer`) share your name, colour, picture, Doom faces and gear with friends.
+
+### Editing: the Multitrack timeline
+- **Tracks:** Video 1, Video 2, Cards, Titles, Subtitles, Friends' subs, Music, Narration, Shots, Events and Heart rate.
+- **Moving and cutting:**
+  - Cut, trim, split and ripple, or place pieces freely.
+  - Magnetic edges, box selection, moving many items at once.
+  - Skimming, and a live preview with sound.
+- **Undo, saving and shortcuts:**
+  - Undo, saved edit versions, and automatic snapshots.
+  - Keyboard shortcut sets: AVM's own, Final Cut Pro's or DaVinci Resolve's.
+- **Edit page:** one clip at a time. Cut it, and mark shots and hits on its sound strip.
+- **Storyboard:** the movie as cards you drag into order, plus a "clip movie" of the best parts.
+- **Auto edit:** makes a first edit by itself. *(Mac)* It can let an on-device AI look at the moments (Apple Intelligence or an Ollama vision model).
+- **Beat edit:** cuts the video to the beat of a song. *(Mac)* A **music video** maker adds the lyrics.
+- **Speed:** slow motion that returns to normal, instant replays, rewinds, speed ramps and stutters.
+- **Looks and colour:**
+  - Looks and colour grades, `.cube` LUTs, the cinema look (glow, grain, vignette, bars) and matched colours between cameras.
+  - Steadying, and slow zooms (Ken Burns).
+- **Camera effects:** shake, breathing, fog, smoke, rain, mud, film burn, anamorphic flares, sun rays, heat haze and light leaks.
+- **Transitions:**
+  - Dissolves and wipes.
+  - Luma melt, lens flare, prism, warp, film roll, cube, ripple.
+  - **Team-logo transitions:** logo, smoke logo, fire logo, burning logo and logo on fire.
+- **Beat effects:** flashes, zooms and shakes on the music's beats.
+
+### Cards and titles
+- **Card families:** story, game, war, funny and generated cards; intro, game mode, stats and end cards; credits.
+- **Motion cards** cut you out of the video (freeze frames, posters, callouts, pop-ups, stop motion).
+- **Game cards:**
+  - **Game menu cards**, loadout cards from photos of your own gear (with a gear editor that removes the background), team logos and 3D logos.
+  - **Maps:** the briefing map, a tactical map and a 3D flyover of your route, from the field you planned on the Map page.
+  - **Radio call:** walkie-talkie sound, static and radio subtitles.
+  - **Heartbeat:** your live heart rate.
+- **Drawn tech cards:**
+  - **Gun teardown:** a gun taken apart, with what was wrong and the fix.
+  - **Chronograph:** a reading with the BB's flight.
+  - **HPA:** how the air gets to the BB.
+  - **Kit:** your kit laid out piece by piece.
+- **"Previously" and archive cards** use your earlier videos from the same place.
+- **Titles** come in many styles. Every game style draws cards and titles its own way.
+- **Coloured icons** on the inspector's sections show where each part starts. *(Mac)*
+
+### Sound, speech and subtitles
+- **Shots found from the sound** of your clips and counted from your magazine: weapon changes, reloads and ammo on the HUD.
+- **Game events:** objectives, mission updates and hits, as they happen. A game log can be imported.
+- **Speech to text** with Whisper on the graphics chip, or Apple's recognizer. *(Mac)*
+  - **English subtitles** are made by an AI on your own Mac (an Ollama model or Apple Intelligence), or by Whisper itself.
+  - Friends' lines show in their own colours with their names.
+- **Subtitle looks:** classic bands, styled ones per game style, and word-by-word looks (clean, karaoke, minimal, bold).
+- **Saved with the movie:** subtitles go into the exported movie as tracks you can switch on and off, plus `.srt` files.
+- **Narration:** text to speech with many voices. The game sound ducks under the voice.
+- **Music:** songs on the timeline with fades, and ducking under narration.
+
+### Game day: fields, games and players
+- **kuulaportti.fi:** the day's game is found by place and time, with the players, factions, your game history and statistics.
+- **Weather:** from the forecast archive, or from your watch's workout.
+- **Map page (field planner):** draw the field with areas, bases, flags, routes, spawn points and radii.
+  - Teams, game modes and a heat map of where you went.
+  - Share and import fields (`.aavmfield`, GeoJSON, KML, GPX).
+- **Airsoft fields in Finland:** a map of the clubs' fields is shown below.
+
+### Your videos: the Media page
+- **All your videos** from your folders, drives and NAS, grouped by day, event, month or folder, or shown on a map.
+  - Details found from the files: camera, place and length.
+  - Skimming previews.
+- **Smoother editing:** smooth-play copies (proxies), and the camera's own low-res files (`.LRF`) used when they match.
+- **Housekeeping:**
+  - A copy to the NAS after import. *(Mac)*
+  - Finding moved or missing clips.
+  - A project's disk use.
+
+### Export and share
+- **The movie** in your clips' own size and frame rate, up to 4K, using your graphics card's encoder (NVENC, Quick Sync, AMF, VAAPI, Apple HEVC).
+- **Vertical Reels (9:16)** that follow the action or track an area. *(Mac)*
+- **Short clips:** of one piece, or of many at once.
+- **Thumbnails, YouTube publishing and chapters.** *(Mac)*
+- **Updates:** the apps update themselves from this page's Releases.
+
+### Mac extras
+- **Phone remote:** control the timeline from your phone and start jobs (export, auto edit, subtitles, finding people and shots). It also works with Siri shortcuts.
+- **Apple Watch marks:** tap your watch during the game and the moment is starred on the timeline.
+- **An activity badge** shows everything running in the background, with a stop button.
+
 ## Example
 
 Made by the app itself (AVM Windows and Linux 1.6.88 / AVM Swift 1.6.88) from one short test clip, with a made-up route and heart rate.
