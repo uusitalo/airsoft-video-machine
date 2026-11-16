@@ -36,7 +36,8 @@ A project made on one opens on the other. Features marked *(Mac)* are only in th
   - The classic ones: bold, sport, terminal, gauge, glass, minimal, tactical and neon.
   - The Pro family.
   - The **Airsoft HUD**: a satellite map with the field you drew, your team's badge turning in 3D, and a **Doom-style face** that reacts to the game. The face can be drawn or made from your own selfies, and you can place and size it anywhere.
-- **40+ game styles** (shooter, royale, retro, cinema, field and more) draw their own HUD, menus, titles, transitions and shot marks.
+- **45 game styles** (shooter, royale, retro, cinema, film (noir, war documentary, sci-fi epic, samurai), field and more) draw their own HUD, menus, titles, transitions and shot marks.
+- **Cinema pack:** film grades (print film, day for night, desert epic, moonlight, neo-noir, 70s), camera effects (film gate, embers, ash, bokeh), cinema transitions (letterbox, focus pull, iris, smash cut) 8 cinematic titles and 10 movie titles (gold, chrome, glass, neon, forged iron, name plate, typed place and time, chapter page, time card, rolling credits).
 - **When you are hit**, the heartbeat flatlines with a heart monitor and a long beep.
 - **Per piece:** the HUD can be turned off or given another theme for any piece of the video.
 
@@ -133,6 +134,38 @@ A project made on one opens on the other. Features marked *(Mac)* are only in th
 - **Phone remote:** control the timeline from your phone and start jobs (export, auto edit, subtitles, finding people and shots). It also works with Siri shortcuts.
 - **Apple Watch marks:** tap your watch during the game and the moment is starred on the timeline.
 - **An activity badge** shows everything running in the background, with a stop button.
+
+## Movie titles (1.7.33)
+
+Ten titles for any kind of video, drawn like a film's own: **gold** with beams of light and a glint, slanted **chrome** with a lens flare, frosted **glass**, a flickering **neon** sign, **forged** iron that cools while sparks rise, a **name plate**, a typed **place and time**, a **chapter page**, a **time card** and **rolling credits**. Made by the app itself (AVM Windows and Linux 1.7.33); the same in AVM Swift 1.7.33.
+
+![Movie titles](docs/previews/movie-titles.webp)
+
+[▶ All ten movie titles (MP4, 53 s)](docs/previews/movie-titles.mp4)
+
+## Cinema pack (1.7.31)
+
+Made by the app itself (AVM Windows and Linux 1.7.31) from one short test clip. The same in AVM Swift 1.7.31.
+
+[![The cinema pack preview](docs/previews/cinema-preview.jpg)](docs/previews/cinema-preview.mp4)
+
+[▶ The whole cinema pack preview (MP4, 2 min 12 s)](docs/previews/cinema-preview.mp4)
+
+**Four film styles** (Timeline › Game style): **Noir** (black and white in a 4:3 frame, venetian blinds, a typed inner monologue; a hit turns the picture negative and bleeds red), **War documentary** (a news lower third and a timecode; a hit knocks the camera over), **Sci-fi epic** (ochre in very wide bars, dust, a horizon line) and **Samurai** (an ink grade, a red sun seal with your heart rate; a hit cuts a red slash). Each has its own HUD, cards, menus, shot and hit effects and sounds.
+
+![Film styles](docs/previews/film-styles.webp)
+
+**Cinematic titles** (Cards › Cinematic titles): the picture in the letters, a trailer title with a light sweep, an opening quote, an opening credit, a split reveal, a title out of smoke, a letterbox title and an epic wide title.
+
+![Cinematic titles](docs/previews/cinematic-titles.webp)
+
+**Cinema grades, camera effects and transitions:** Print film, Day for night, Desert epic, Moonlight blue, Neo-noir and 70s film; film gate, embers, falling ash and bokeh lights; letterbox close, focus pull, iris and smash cut.
+
+![Cinema effects](docs/previews/cinema-effects.webp)
+
+**Game mode and place cards** (1.7.26–1.7.30): 15 game modes (capture the flag, rush, search & destroy, king of the hill, infection…) and what happens at a place of the field (captured, attacking, defending, lost…), each drawn in the game style's own layout.
+
+![Game mode and place cards](docs/previews/mode-and-place-cards.webp)
 
 ## Example
 
